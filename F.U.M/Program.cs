@@ -173,6 +173,18 @@ namespace F.U.M
             }
         }
 
+        public static T Sum<T>(params T[] values) where T : struct
+        {
+            dynamic sum = 0;
+
+            foreach (T value in values)
+            {
+                sum += value;
+            }
+
+            return sum;
+        }
+
         static void Main(string[] args)
         {
 
